@@ -62,6 +62,14 @@
 										A. {choice}}<br>
 										</td>
 									</tr>
+									<tr>
+										<td>?roulette</td>
+										<td>Plays a game of Russian Roulette, muting the user if they lose.</td>
+										<td>{delete}<br>
+										{choose:mute; to live; to live; to live; to live;to live}<br>
+										{!announce {channel} {user} got {choice}!}<br>
+										{!{choice} {user} 3 you lost the roulette.}</td>
+									</tr>
 								</tbody>
 							</table>
 
