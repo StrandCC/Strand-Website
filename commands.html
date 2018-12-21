@@ -54,13 +54,24 @@
 									<tr>
 										<td>?say [message]</td>
 										<td>Makes the bot say the message</td>
-										<td>{delete}<br>$1+</td>
+										<td>{delete}<br>
+											$1+</td>
 									</tr>
 									<tr>
 										<td>?owner [message]</td>
 										<td>Sends a direct message to the server owner (Requires Server Moderator).</td>
-										<td>{delete}<br>{require:serverMod}<br>{dm:{server.ownerID}}{user} sent you a message! Message: **$1+**<br>{!announce {channel} {user}, your message has been sent to the server owner! :mailbox_with_mail:}</td>
+										<td>{delete}<br>
+										{require:serverMod}<br>
+										{dm:{server.ownerID}}{user} sent you a message! Message: **$1+**<br>
+										{!announce {channel} {user}, your message has been sent to the server owner! :mailbox_with_mail:}</td>
 									</tr>
+									<tr>
+										<td>?pomodoro</td>
+										<td>Sets a <a href="https://francescocirillo.com/pages/pomodoro-technique">Pomodoro timer</a> for the user.</td>
+										<td>{delete}<br>
+										{dm}:tomato: Tick tock! Your pomodoro timer has been set, {user}!<br>
+										{silent}<br>
+										{!remindme {user} Your pomodoro timer just ended! in 25 minutes}</td>
 							</table>
 
 					</section>
