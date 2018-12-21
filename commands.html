@@ -45,23 +45,20 @@
 							<table>
 								<thead>
 									<tr>
-										<b><td>Trigger</td>
-										<td>Requirements</td>
+										<td>Trigger</td>
 										<td>Use</td>
-										<td>Command Syntax</td></b>
+										<td>Command Syntax</td>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
 										<td>?say [message]</td>
-										<td>None</td>
 										<td>Makes the bot say the message</td>
 										<td>{delete}<br>$1+</td>
 									</tr>
 									<tr>
 										<td>?owner [message]</td>
-										<td>Server Moderator</td>
-										<td>Sends a direct message to the server owner.</td>
+										<td>Sends a direct message to the server owner (Requires Server Moderator).</td>
 										<td>{delete}<br>{require:serverMod}<br>{dm:{server.ownerID}}{user} sent you a message! Message: **$1+**<br>{!announce {channel} {user}, your message has been sent to the server owner! :mailbox_with_mail:}</td>
 									</tr>
 							</table>
