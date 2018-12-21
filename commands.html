@@ -72,6 +72,19 @@
 										{dm}:tomato: Tick tock! Your pomodoro timer has been set, {user}!<br>
 										{silent}<br>
 										{!remindme {user} Your pomodoro timer just ended! in 25 minutes}</td>
+									</tr>
+									<tr>
+										<td>?mention [user] [message]</td>
+										<td>Mentions a user and shows their current status</td>
+										<td>{delete}<br>
+										$1.user.mention **($1.user.status)** | $2+</td>
+									</tr>
+									<tr>
+										<td>?link [link] [description]</td>
+										<td>Embeds a clickable link button with a description.</td>
+										<td>{delete}<br>
+										{!announce {channel} [Link](https://$1) | $2+}</td>
+									</tr>
 							</table>
 
 					</section>
