@@ -91,6 +91,15 @@
 										<td>{delete}<br>
 										{!announce {channel} [Link](https://$1) | $2+}</td>
 									</tr>
+									<tr>
+										<td>?superclean</td>
+										<td>Cleans the channel of Dynobot commands and messages</td>
+										<td>{delete}<br>
+										{silent}<br>
+										{require:serverMod}<br>
+										{!clean}<br>
+										{!purge startswith {prefix}}<br>
+										All Dynobot messages and commands in this channel have been cleaned!</td>
 								</tbody>
 							</table>
 
