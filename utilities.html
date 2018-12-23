@@ -9,15 +9,17 @@
 	</head>
 	<body class="is-preload">
 		<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109050143-3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-109050143-3');
-</script>
-
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109050143-3"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'UA-109050143-3');
+	</script>
+	<script src="dist/clipboard.min.js"></script>
+	<script>
+		var clipboard = new ClipboardJS('.btn');
+	</script>
 
 		<!-- Header -->
 			<header id="header">
@@ -48,14 +50,16 @@
 										<td><b>Trigger</b></td>
 										<td><b>Use</b></td>
 										<td><b>Command Code</b></td>
+										<td><b>Copy</b></td>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
 										<td>?say [message]</td>
 										<td>Makes the bot say a specified message.</td>
-										<td>{delete}<br>
+										<td id="say">{delete}<br>
 											$1+</td>
+										<td><button class="btn" data-clipboard-target="#say"><img src="assets/clippy.svg" alt="Copy to clipboard"></button></td>
 									</tr>
 									<tr>
 										<td>?embed [message]
