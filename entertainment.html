@@ -55,17 +55,20 @@ _　_<br>
 Q. $1+<br>
 A. {choice}}<br></textarea>
 										<button class="btn" data-clipboard-target="#ballCopy">
-    									<img src="assets/clippy.svg" width="13"alt="Copy to clipboard">
+    									<img src="assets/clippy.svg" width="20"alt="Copy to clipboard">
 										</button>
 										</td>
 									</tr>
 									<tr>
 										<td>?roulette</td>
 										<td>Plays a game of <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Russian_roulette">Russian Roulette</a>, muting the user for 3 mninutes if they lose. The user cannot be a moderator or administrator.</td>
-										<td>{delete}<br>
+										<td><textarea id="rolutteCopy" cols="150" contenteditable="false">{delete}<br>
 										{choose:mute;second chance;second chance;second chance;second chance;second chance}<br>
 										{!announce {channel} {user} got a {choice}!}<br>
-										{!{choice} {user} 3 Roulette}</td>
+										{!{choice} {user} 3 Roulette}</textarea>
+										<button class="btn" data-clipboard-target="#rolutteCopy">
+											<img src="assets/clippy.svg" width="20"alt="Copy to clipboard">
+										</button></td>
 									</tr>
 								</tbody>
 							</table>
