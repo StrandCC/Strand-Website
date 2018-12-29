@@ -34,7 +34,7 @@
 							<p>These are amusing commands and game modules for entertainment in your server.</p>
 							<p><i>This directory assumes that you understand the basics of adding commands. We assume you are using the default command prefix, ?. Commands with inputs are denoted as ?command [input]. Commands with choice inputs are denoted as ?command [input1/input2].</i></p>
 						</div>
-						<!--
+	
 						<div class="inner">
 							<table>
 								<thead>
@@ -48,28 +48,23 @@
 									<tr>
 										<td>?8ball [question]</td>
 										<td>Asks the all knowing <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Magic_8-Ball">Magic 8-Ball</a> a question.</td>
-										<td><textarea id="ballCopy">{delete}<br>
+										<td>{delete}<br>
 {choose:It is certain; It is decidedly so; Without a doubt; Yes definitely; You may rely on it; As I see it, yes; Most likely; Outlook good; Yes; Signs point to yes; Reply hazy try again; Ask again later; Better not tell you now; Cannot predict now; Concentrate and ask again; Don't count on it; My reply is no; My sources say no; Outlook not so good; Very doubtful}<br>
 {!announce {channel} {user.username}<br>
 <:8ball_blob:349679658033348618> 8Ball<br>
 _　_<br>
 Q. $1+<br>
-A. {choice}}<br></textarea>
-										<button class="btn" data-clipboard-target="#ballCopy">
-    									<img src="assets/clippy.svg" width="20"alt="Copy to clipboard">
-										</button>
+A. {choice}}<br>
+										
 										</td>
 									</tr>
 									<tr>
 										<td>?roulette</td>
 										<td>Plays a game of <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Russian_roulette">Russian Roulette</a>, muting the user for 3 mninutes if they lose. The user cannot be a moderator or administrator.</td>
-										<td><textarea id="rolutteCopy" cols="150" contenteditable="false">{delete}<br>
+										<td>{delete}<br>
 										{choose:mute;second chance;second chance;second chance;second chance;second chance}<br>
 										{!announce {channel} {user} got a {choice}!}<br>
-										{!{choice} {user} 3 Roulette}</textarea>
-										<button class="btn" data-clipboard-target="#rolutteCopy">
-											<img src="assets/clippy.svg" width="20"alt="Copy to clipboard">
-										</button></td>
+										{!{choice} {user} 3 Roulette}</td>
 									</tr>
 								</tbody>
 							</table>
@@ -77,7 +72,7 @@ A. {choice}}<br></textarea>
 					</section>
 
 			</div>
-		-->
+	
 		<!-- Footer -->
 			<footer id="footer" class="wrapper alt">
 				<div class="inner">
