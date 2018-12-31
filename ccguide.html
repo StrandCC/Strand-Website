@@ -30,10 +30,10 @@
 				<!-- Main -->
 					<section id="main" class="wrapper">
 						<div class="inner">
-							<h1><a id="The_Beginners_Guide_to_Custom_Commands_0"></a>The Beginner’s Guide to Custom Commands</h1>
-							<p>So, you’re here to learn how Custom Commands work. Well, you’ve come to the right place! In this guide, we’ll be teaching the basics of creating Custom Commands and go over the common variables in them. You’ll learn, among other things, how to make a say command, embed announcement messages, build an 8-Ball, and send direct messages to users using Dynobot.</p>
+							<h1><a id="Title"></a>The Beginner’s Guide to Custom Commands</h1>
+							<p>So, you’re here to learn how Custom Commands work. Well, you’ve come to the right place! In this guide, we’ll be teaching the basics of creating Custom Commands and go over the common variables in them. You’ll learn, among other things, how to make a <a href="#Input>say command</a>, <a href="#Command">embed announcement messages</a>, <a href=#Choose>build an 8-Ball</a>, and send <a href="#DM">direct messages</a> to users using Dynobot.</p>
 							<p>Before we begin, let’s talk about some of the syntax and assumptions we will be using in this guide.</p>
-							<h2><a id="Syntax_5"></a>Syntax</h2>
+							<h2><a id="Syntax"></a>Syntax</h2>
 							<p>This guide assumes you are using the default prefix for commands, which is the question mark (?). If you have a different prefix, you should use that instead. It is also assumed you are using the regular Dynobot and not the Premium version. Both bots will still be able to use the Custom Commands and variables noted in the guide. The only difference between the two that will affect this guide is that Premium’s dashboard allows you to directly edit Custom Commands added.</p>
 							<p>Command examples will be written like this:</p>
 							<p><strong>?command</strong> <strong>[input]</strong> - <em>Usage and Syntax</em></p>
@@ -41,34 +41,34 @@
 							<p><strong>Chat Output (If Applicable) and Explanation</strong></p>
 							<br>
 							<h3>Let’s get started!</h3>
-							<h2><a id="Variables_19"></a>Variables:</h2>
+							<h2><a id="Variables"></a>Variables:</h2>
 							<p><em>Variables are simply placeholders and tags that you can use inside Custom Commands. These placeholders will be updated with specific values when the command is called. There are a lot of variables that can be used in Custom Commands, but a select few tend to get used the most.</em></p>
-							<h2><a id="user_23"></a>{user}</h2>
+							<h2><a id="User"></a>{user}</h2>
 							<p><em>Outputs a mention of the person calling the command. It’s a great, easy-to-use variable that you can include in most commands. Here’s a simple example- we’ll go more into depth on what you can do with this variable later.</em></p>
 							<p><strong>?greet</strong> - <em>Greets the user.</em></p>
 							<pre><code>Hi, {user}!</code></pre>
 							<p><strong>Chat Output:</strong> Hi, <code>@TheRoboticon</code>!</p>
 							<p>When this command is called, Dynobot replaces the <code>{user}</code> variable with the name of the user who calls it. Again, there’s a lot more you can do with this variable that we’ll explain further on.</p>
-							<h2><a id="server_and_channel_35"></a>{server} and {channel}</h2>
+							<h2><a id="Location"></a>{server} and {channel}</h2>
 							<p><em>Outputs the name of the server and the name of the text channel in which the command is used, respectively. Of the two, you’ll be using {channel} the most, simply because it’s more specific and has a larger range of uses.</em></p>
 							<p><strong>?location</strong> - <em>Outputs the text channel and server.</em></p>
 							<pre><code>You are in the {channel} channel of {server}.</code></pre>
 							<p><strong>Chat Output:</strong> You are in the <code>#general</code> channel of Strand.</p>
 							<p>Similar to the <code>{user}</code> variable, the <code>{channel}</code> and <code>{server}</code> variables are updated by Dynobot when the command is called. You would get this example output if you ran this command in the <code>#general</code> channel of a server called Strand.</p>
-							<h2><a id="role_47"></a>{&amp;role}</h2>
+							<h2><a id="Mention"></a>{&amp;role}</h2>
 							<p><em>Mentions a specified role. Useful for making alerts and notifications.</em></p>
 							<p><strong>?update</strong> - <em>Sends a message about updates mentioning Subscribers role.</em></p>
 							<pre><code>{&amp;Subscribers}, there's a new update in the {#updates} channel!</code></pre>
 							<p><strong>Chat Output:</strong> <code>@Subscribers</code>, there’s a new update in the <code>#updates</code> channel!</p>
 							<p>As you can see, the command outputs a mention for the Subscribers role. You might have noticed the <code>{#updates}</code> inside the command, which created a link to the <code>#updates</code> channel. When you want to post a channel inside a command, you’ll want to use that format.</p>
-							<h2><a id="delete_59"></a>{delete}</h2>
+							<h2><a id="Delete"></a>{delete}</h2>
 							<p><em>If you’ve been following along, you might have noticed that when you use these commands, it doesn’t delete the message. The {delete} tag removes the command for you, which makes your commands look cleaner.</em></p>
 							<p><em>Let’s update the greet command we used before with {delete} tag.</em></p>
 							<p><strong>?delgreet</strong> - <em>Greets the user and deletes the message calling the command.</em></p>
 							<pre><code>{delete}<br>Hi, {user}!</code></pre>
 							<p><strong>Chat Output:</strong> Hi, <code>@TheRoboticon</code>!</p>
 							<p>You’ll see the same chat output as the <code>?greet</code> command we used before, but now, the command you used to show it will get deleted! Cool, right? From now on, we’ll be including <code>{delete}</code> in most of our commands, since it’s so useful.</p>
-							<h2><a id="requirerole_and_requirechannel_74"></a>{require:role} and {require:#channel}</h2>
+							<h2><a id="Require"></a>{require:role} and {require:#channel}</h2>
 							<p><em>Adds a required role and channel to call the command, respectively. You can allow multiple roles to call the command if you specified multiple ones. This variable is great for protecting your Custom Commands that do important things.</em></p>
 							<p><em>Let’s update the ?update command we used early with a requirement that the user needs to have either the Trusted role or be a bot moderator, and that the command needs to be called in the #announcements channel.</em></p>
 							<p><strong>?requpdate</strong> - <em>Sends a message about updates mentioning Subscribers role, with channel and role requirements added.</em></p>
@@ -77,7 +77,7 @@
 							<p>You’ll get the same output as before if you ran the command in the <code>#announcements</code> channel and have the <code>Trusted</code> role or if you’re a bot moderator, but if you aren’t, the command wouldn’t be run at all! It’ll be treated like a normal message and will completely be ignored by Dynobot.</p>
 							<p>What’s a bot moderator, you ask? Well, Dynobot also allows you to use two other requirements besides the roles you’ve set up on your server. Those are <code>{require:serverMod}</code>, which you just saw, and <code>{require:serverAdmin}</code>. You can add bot moderators with Dynobot using the built-in command <code>?addmod [user/role]</code> and view a list of moderators with <code>?listmods</code>. As for admins, Dynobot considers anyone with Administrative permissions (anyone with the Manage Server permission) to be an admin. You can use these two built-in requirements in your Custom Commands to prevent the average user from using them.</p>
 							<p>As for the <code>{require:#channel}</code> tag, it works exactly like how you would expect. You can use multiple instances of it to allow the Custom Command to be used in multiple channels.</p>
-							<h2><a id="N_and_N_96"></a>$N and $N+</h2>
+							<h2><a id="Inputs"></a>$N and $N+</h2>
 							<p><em>These variables are the essential building blocks for complex commands. $N allows you to specify inputs in your commands, using the format $1, $2, $3, and so on. $N+ works the same way, but gets everything after the specified input.</em></p>
 							<p><em>Since these variables are pretty complex, we’ll be using multiple examples for this one.</em></p>
 							<p><strong>?eat [food]</strong> - <em>Displays a message saying the user ate a specified food.</em></p>
@@ -95,20 +95,20 @@
 							<p><strong>Chat Output:</strong> This is a cool message!</p>
 							<p>This message would be generated by calling <code>?say This is a cool message!</code> in the chat. The use of the say command should be pretty obvious- you’ll just include the message, however long it might be, after the <code>?say</code>. The <code>$N+</code> allows you to grab the Nth input and everything after that, which is great for Custom Commands for announcement messages. For example, <code>$2+</code> would grab everything after the second input.</p>
 							<p>Now, let’s take a look at how we can use default Dynobot commands in Custom Commands.</p>
-							<h2><a id="command_135"></a>{!command}</h2>
+							<h2><a id="Command"></a>{!command}</h2>
 							<p><em>Calls a default Dynobot command. This is the variable is the gateway to creating complex and advanced Custom Commands that perform multiple functions in your server. Here’s an example of what you can achieve with it.</em></p>
 							<p><strong>?embed [message]</strong> - <em>Embeds the message in the current channel.</em></p>
 							<pre><code>{delete}<br>{!announce {channel} $1+}</code></pre>
 							<p><strong>Chat Output:</strong> This is an embedded message!</p>
 							<p>As you can see in this command, we’ve combined four different things we’ve learned so far into one custom command. The <code>{delete}</code> removes the message that calls the command, the <code>{!announce}</code> calls the built-in <code>?announce</code> command, <code>{channel}</code> specifies the current channel and the <code>$1+</code>  gets all of the text inputted. The chat output is the result of calling <code>?embed This is an embedded message!</code>.</p>
 							<p>A cool trick you can do with embedded messages is create hyperlinks. Using the format <code>[link name](link)</code>, you can place hyperlinks into your embeds. For example, using <code>?embed [Google](https://www.google.com)</code> would post a hyperlink named <a href="https:/www.google.com">Google</a>.</p>
-							<h2><a id="dm_and_dmuser_150"></a>{dm} and {dm:user}</h2>
+							<h2><a id="DM"></a>{dm} and {dm:user}</h2>
 							<p><em>These two variables will send a direct message to the command user or a specified user with everything after the {dm} variable. Let’s make a simple DM command to send direct messages!</em></p>
 							<p><strong>?dm [user] [message]</strong> - <em>Sends a direct message to the specified user. Requires moderator permissions.</em></p>
 							<pre><code>{delete}<br>{require:serverMod}<br>{dm:$1}$2+</code></pre>
 							<p><strong>DM Output:</strong> Hello there!</p>
 							<p>This would be the result of calling the command as <code>?dm TheRoboticon Hello there!</code>. If you wanted to make a command that DM’s the user calling it, you would simply write <code>{dm}</code> without specifying a user.</p>
-							<h2><a id="choose_and_choice_164"></a>{choose} and {choice}</h2>
+							<h2><a id="Choose"></a>{choose} and {choice}</h2>
 							<p><em>These two variables work together to create randomization in Custom Commands! {choose} takes the format {choose:option1;option2;option3} and {choice} gets a random selection from the options in {choose}. In this example, we’ll be making the classic 8ball command.</em></p>
 							<p><strong>?8ball [question]</strong> - <em>Replies to a question with an</em> <a href="https://en.wikipedia.org/wiki/Magic_8-Ball"><em>Magic 8 Ball</em></a> <em>answer.</em></p>
 							<pre><code>{delete}<br>{choose:It is certain;It is decidedly so;Without a doubt;Yes, definitely;You may rely on it;As I see it, yes;Most likely;Outlook good;Yes; Signs point to yes;Reply hazy try again;Ask again later;Better not tell you now;Cannot predict now;Concentrate and ask again;Don't count on it;My reply is no;My sources say no;Outlook not so good;Very doubtful}<br>{!announce {channel} &lt;:8ball_blob:349679658033348618&gt;  __** Magic 8 Ball  **__<br>Q: $1+<br>A: {choice}}</code></pre>
@@ -117,32 +117,32 @@
 							Q: Are Custom Commands fun?<br>
 							A: Yes, definitely</p>
 							<p>This would be one of the possible responses of the bot when the command <code>?8ball Are Custom Commands fun?</code> is called. The <code>{choice}</code> variable is replaced with a random element in the <code>{choose:}</code> list, in this case the “Yes, definitely”. When making your own commands, make sure to use semicolons to separate each element, not commas!</p>
-							<h2><a id="silent_183"></a>{silent}</h2>
+							<h2><a id="Silent"></a>{silent}</h2>
 							<p><em>This tag silences the default responses of Dynobot. Let’s take a look at using it to hide the response “Changed roles for user” when adding or removing roles.</em></p>
 							<p><strong>?certify [user]</strong> - <em>Gives the user the Certified role.</em></p>
 							<pre><code>{delete}<br>{silent}<br>{!role $1 +Certified}<br>$1 has been certified!<br></code></pre>
 							<p><strong>Chat Output:</strong> TheRoboticon has been certified!</p>
 							<p>While the message that the user has been certified is posted, the default message Dynobot posts when roles are changed is hidden. Even though <code>{silent}</code> is a great tag for hiding role changes and other responses, it can interfere with some commands- for example, <code>{silent}</code> will prevent the <code>{!announce}</code> command from posting.</p>
-							<h2><a id="respondchannel_198"></a>{respond:#channel}</h2>
+							<h2><a id="Respond"></a>{respond:#channel}</h2>
 							<p><em>Specifies a different channel to post a message, rather than the current one. We’ll use this to improve the say command.</em></p>
 							<p><strong>?modsay [channel] [message]</strong> - <em>Post a message to a specified channel. Requires moderator permissions.</em></p>
 							<pre><code>{delete}<br>{require:serverMod}<br>{channel:$1}<br>$2+</code></pre>
 							<p><strong>Chat Output:</strong> Hello there!</p>
 							<p>This chat output might be the result of a user with moderator permissions calling <code>?modsay #general Hello there!</code>, which would post into <code>#general</code>. This tag is useful for setting up logs that post into a different channel, but it will direct any text in the Custom Command there, meaning that you can’t have multiple <code>{respond:#channel}</code> tags.</p>
-							<h2><a id="time_time12_date_datetime_and_datetime12_213"></a>{time}, {time12}, {date}, {datetime}, and {datetime12}</h2>
+							<h2><a id="Time"></a>{time}, {time12}, {date}, {datetime}, and {datetime12}</h2>
 							<p><em>These five variables post the 24-hour time, 12-hour time, date, date and 24-hour time, and date and 12-hour time, respectively. All of them will have the timezones in EST, but if you have the Dyno V4 Dashboard, you can change the timezone displayed.</em></p>
 							<p><strong>?time</strong> <strong>-</strong> <em>Posts the date and 12-hour time.</em></p>
 							<pre><code>{delete}<br>Here's the date and time: {datetime12}.</code></pre>
 							<p><strong>Chat Output:</strong> Here’s the date and time: Aug 25, 2018 03:37:53 pm.</p>
 							<p>Each variable prints a different response accordingly. This result would display if the command was called on Aug 25, 2018 at 03:37:53 pm.</p>
-							<h2><a id="noeveryone_226"></a>{noeveryone}</h2>
+							<h2><a id="Noeveryone"></a>{noeveryone}</h2>
 							<p><em>Changes the @everyone mention in a command to plain text. Great to include in a say command to prevent people from abusing it.</em></p>
 							<p><strong>?hug [user]</strong> - <em>Hugs a user.</em></p>
 							<pre><code>{delete}<br>{noeveryone}<br>{user} hugged $1.</code></pre>
 							<p><strong>Chat Output:</strong> <code>@TheRoboticon</code> hugged everyone.</p>
 							<p>This would be the output if I used <code>?hug @everyone</code>, since the message posts without a mention. It’s worth noting that the command will still ping everyone as it’s used, since Dyno can’t instantly delete a message. However, the <code>@everyone</code> will become plaintext instead.</p>
 							<p>These aren’t all the variables available for Dynobot. If you’re curious, you can find more on the Dynobot server or <a href="https://media.discordapp.net/attachments/335003834445332481/350905773141917696/unknown.png?width=611&amp;height=703">here</a>.</p>
-							<h1><a id="Building_your_Custom_Commands_243"></a>Building your Custom Commands:</h1>
+							<h1><a id="Creating"></a>Building your Custom Commands:</h1>
 							<p>Building your own Custom Commands can be really fun! However, there are some requirements and limitations for making them. Here’s how to add Custom Commands to your server.</p>
 							<p>First, head to the <a href="https://www.dynobot.net/">Dynobot Dashboard</a> and log in. Select your server from the tab in the upper right hand corner, then go to the modules on the left side. Select and enable Custom Commands if you haven’t already, then refresh your page. From there, type your command name into first box and your code into the second, making sure you follow the guidelines below.</p>
 							<ul>
@@ -152,9 +152,9 @@
 							<li>Make sure that Custom Commands that include things like <code>{!ban}</code> and <code>{!mute}</code> have requirements to prevent everyone from using them.</li>
 							</ul>
 							<p>From there, press Add Command. It make take a few seconds for the command to update to your server. You can remove commands by going to the Commands tab on the page and pressing delete to remove it.</p>
-							<h1><a id="Congratulations_256"></a>Congratulations!</h1>
+							<h1><a id="Congratulations"></a>Congratulations!</h1>
 							<p>You now know many of the advanced Dynobot Variables and how to use them in Custom Commands! I hope this guide was helpful to you in learning about Custom Commands. Check out the Resources below for more!</p>
-							<h1><a id="Resources_260"></a>Resources:</h1>
+							<h1><a id="Resources"></a>Resources:</h1>
 							<p><a href="https://discord.gg/MRaPFTH">Official Dyno Server</a> - 24/7 Official Dynobot Staff Help<br>
 							<a href="https://www.dynobot.net/">Dynobot Dashboard</a> - Dynobot Configuration Dashboard<br>
 							<a href="https://www.dynobot.net/upgrade">Get Dynobot Premium for your Server</a> - Adds cool features and functionality to your Dynobot<br>
