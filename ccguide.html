@@ -130,18 +130,28 @@
 							<pre><code>{delete}<br>{require:serverMod}<br>{channel:$1}<br>$2+</code></pre>
 							<p><strong>Chat Output:</strong> Hello there!</p>
 							<p>This chat output might be the result of a user with moderator permissions calling <code>?modsay #general Hello there!</code>, which would post into <code>#general</code>. This tag is useful for setting up logs that post into a different channel, but it will direct any text in the Custom Command there, meaning that you can’t have multiple <code>{respond:#channel}</code> tags.</p>
+
 							<h2><div id="Time">{time}, {time12}, {date}, {datetime}, and {datetime12}</div></h2>
 							<p><em>These five variables post the 24-hour time, 12-hour time, date, date and 24-hour time, and date and 12-hour time, respectively. All of them will have the timezones in EST, but if you have the Dyno V4 Dashboard, you can change the timezone displayed.</em></p>
 							<p><strong>?time</strong> <strong>-</strong> <em>Posts the date and 12-hour time.</em></p>
 							<pre><code>{delete}<br>Here's the date and time: {datetime12}.</code></pre>
 							<p><strong>Chat Output:</strong> Here’s the date and time: Aug 25, 2018 03:37:53 pm.</p>
 							<p>Each variable prints a different response accordingly. This result would display if the command was called on Aug 25, 2018 at 03:37:53 pm.</p>
+
 							<h2><div id="Noeveryone">{noeveryone}</div></h2>
 							<p><em>Changes the @everyone mention in a command to plain text. Great to include in a say command to prevent people from abusing it.</em></p>
 							<p><strong>?hug [user]</strong> - <em>Hugs a user.</em></p>
 							<pre><code>{delete}<br>{noeveryone}<br>{user} hugged $1.</code></pre>
 							<p><strong>Chat Output:</strong> <code>@TheRoboticon</code> hugged everyone.</p>
 							<p>This would be the output if I used <code>?hug @everyone</code>, since the message posts without a mention. It’s worth noting that the command will still ping everyone as it’s used, since Dyno can’t instantly delete a message. However, the <code>@everyone</code> will become plaintext instead.</p>
+
+							<h2><div id="prefix">{prefix}</div></h2>
+							<p><em>Outputs command prefix for that server. Can be helpful in custom help commands.</em></p>
+							<p><strong>?serverprefix</strong> - <em>Displays the server prefix. </em></p>
+							<pre><code>Server Prefix: {prefix}</code></pre>
+							<p><strong>Chat Output:</strong> Server Prefix: <code>?</code></p>
+							<p>This code is rather self-explanatory, and can be useful from time to time.</p>
+
 							<p>These aren’t all the variables available for Dynobot. If you’re curious, you can find more on the Dynobot server or <a target="_blank" rel="noopener noreferrer" href="https://media.discordapp.net/attachments/335003834445332481/350905773141917696/unknown.png?width=611&amp;height=703">here</a>.</p>
 							<h1><div id="Creating">Building your Custom Commands:</div></h1>
 							<p>Building your own Custom Commands can be really fun! However, there are some requirements and limitations for making them. Here’s how to add Custom Commands to your server.</p>
