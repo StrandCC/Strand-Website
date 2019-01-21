@@ -143,14 +143,14 @@
 							<p><strong>?hug [user]</strong> - <em>Hugs a user.</em></p>
 							<pre><code>{delete}<br>{noeveryone}<br>{user} hugged $1.</code></pre>
 							<p><strong>Chat Output:</strong> <code>@TheRoboticon</code> hugged everyone.</p>
-							<p>This would be the output if I used <code>?hug @everyone</code>, since the message posts without a mention. It’s worth noting that the command will still ping everyone as it’s used, since Dyno can’t instantly delete a message. However, the <code>@everyone</code> will become plaintext instead.</p>
+							<p>This would be the output if I used <code>?hug @everyone</code>, since the message posts without a mention. It’s worth noting that the command will still ping everyone as it’s used if the user has the ``@everyone`` permission, since Dyno can’t instantly delete a message. However, the <code>@everyone</code> will become plaintext instead.</p>
 
 							<h2><div id="prefix">{prefix}</div></h2>
-							<p><em>Outputs command prefix for that server. Can be helpful in custom help commands.</em></p>
-							<p><strong>?serverprefix</strong> - <em>Displays the server prefix. </em></p>
-							<pre><code>Server Prefix: {prefix}</code></pre>
-							<p><strong>Chat Output:</strong> Server Prefix: <code>?</code></p>
-							<p>This code is rather self-explanatory, and can be useful from time to time.</p>
+							<p><em>Outputs command prefix for that server. Can be helpful in custom help or verification commands.</em></p>
+							<p><strong>?sprefix</strong> - <em>Displays the server prefix. </em></p>
+							<pre><code>Here is the server prefix for {server}: ``{prefix}``</code></pre>
+							<p><strong>Chat Output:</strong>Here is the server prefix for Strand: <code>?</code></p>
+							<p>This would be the output if I ran this command in a server called Strand, with a prefix of ``?``. You can use this in custom commands that instruct users to use another custom command, as it will update if the prefix is ever changed.</p>
 
 							<p>These aren’t all the variables available for Dynobot. If you’re curious, you can find more on the Dynobot server or <a target="_blank" rel="noopener noreferrer" href="https://media.discordapp.net/attachments/335003834445332481/350905773141917696/unknown.png?width=611&amp;height=703">here</a>.</p>
 							<h1><div id="Creating">Building your Custom Commands:</div></h1>
