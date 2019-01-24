@@ -106,6 +106,25 @@
 										{!clean}<br>
 										{!purge startswith {prefix}}<br>
 										All Dynobot messages and commands in this channel have been cleaned!</td>
+									</tr>
+									<tr>
+										<td>?advdm [user] [message]</td>
+										<td>Sends a DM to a user and posts an embed with the message confirmation (requires Server Administrator).</td>
+										<td>{delete}<br>
+										{require:serverAdmin}
+										{dm:$1}<br>
+										$2+<br>
+										{!announce {channel} {user}, I've sent a dm to $1.user.mention saying "$2+".}</td>
+									</tr>
+									<tr>
+										<td>?advsay [channel] [message]</td>
+										<td>Sends a message as Dyno to a channel and posts an embed with the message confirmation (requires Server Administrator).</td>
+										<td>{delete}<br>
+										{require:serverAdmin}<br>
+										{respond:#$1}<br>
+										{!announce {channel} Alright, I've sent a message to {#$1} saying "$2+".}<br>
+										$2+</td>										<td>?advsay [channel] [message]</td>
+									</tr>
 								</tbody>
 							</table>
 
