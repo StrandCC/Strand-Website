@@ -35,8 +35,16 @@
 							<h1 class="major">Strand - Support Tickets Module</h1>
 							<p>This module contains a ticket queue system, approve and deny commands, and a reset command.</p>
 							<p><i>This directory assumes that you understand the basics of adding commands. We assume you are using the default command prefix, ?. Commands with inputs are denoted as ?command [input]. Commands with choice inputs are denoted as ?command [input1/input2].</i></p>
+							<br>
+							<p>Requirements<br>
+							Three roles, Pending, Ticket, and Support.<br>
+							Three channels, #support-room, #support-requests, and #ticket-queue.<br>
+							Set up the #support-room channel to be only accessible to those with the Support role and the Ticket role.<br>
+							Add a welcome message the #support-room channel explaining its use and pin it.<br>
+							Set up the #ticket-queue channel to be only accessible to the Support role.<br>
+							Add a message to the #support-requests channel explaining its use and pin it.</p>					
 						</div>
-	
+							
 						<div class="inner">
 							<table>
 								<thead>
@@ -47,10 +55,49 @@
 									</tr>
 								</thead>
 								<tbody>
-								
+									<tr>
+										<td>?ticket [message]</td>
+										<td>Submits a ticket to the #ticket-queue. Cannot be used again until Ticket is processed.</td>
+										<td>{silent}<br>
+										{delete}<br>
+										{respond:#ticket-queue}<br>
+										{not:Pending}<br>
+										{!setnick {user} [T] {user.username}}<br>
+										{!role {user} +Pending}<br>
+										{user.username} **has submitted a ticket!** :ticket:<br>
+										**Timestamp (EST):** {datetime12}<br>
+										**Request:** *$1+*<br>
+										_ _</td>
+									</tr>
+									<tr>
+										<td>?accept [user]</td>
+										<td>Accepts a user's ticket. Can only be used by Support in the #ticket-queue channel.</td>
+										<td>{delete}<br>
+										{silent}<br>
+										{respond:#support-requests}<br>
+										{require:Support}<br>
+										{require:#ticket-queue}<br>
+										{choose:$1, we've got your ticket!;Hey, $1! We've accepted your request for a ticket!;Your ticket has been accepted, $1!;Your Ticket is up, $1!;**{user.username}** has accepted your ticket, $1!;Staff Member **{user.username}** just approved your ticket, $1!;$1, Staff Member **{user.username}** has just approved your ticket!}{!role $1 +Ticket, -Pending}<br>
+										:ticket: {choice} **Head to** {#support-room} **for a quick conversation with our staff!**<br>
+										{!purge startswith $1.user.username 1}<br>
+										{!setnick $1 $1.user.username}</td>
+									</tr>
+									<tr>
+										<td>?deny [user]</td>
+										<td>Denies a user's ticket. Can only be used by Support in the #ticket-queue channel</td>
+										<td>{delete}<br>
+										{silent}<br>
+										{respond:#support-requests}<br>
+										{require:Support}<br>
+										{require:#ticket-queue}<br>
+										:ticket: $1, we've denied your ticket. Check the FAQ pins :pushpin: to see if your problem could have been answered there or if you broke a rule.
+										{!purge startswith $1.user.username 1}<br>
+										{!setnick $1 $1.user.username}<br>
+										{!role $1 -Pending}</td>
+									</tr>
 								</tbody>
 							</table>
-
+						</div>
 					</section>
 
 			</div>
