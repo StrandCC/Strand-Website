@@ -9,6 +9,50 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+	<style>
+		.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.img {
+	border-radius: 50%;
+		}
+		
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+</style>
 	<body class="is-preload">
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109050143-3"></script>
@@ -38,23 +82,48 @@
 							<br />
 							<h2 align="center"> Community Admins</h2>
 							<br />
-							<img src="images/roboticon_profile.png" width="125px" height="125px" />
+							<div class="container">
+  <img src="images/roboticon_profile.png" alt="Avatar" class="image" style="width:100%">
+  <div class="middle">
+    <div class="text">Website Manager & Repository Manager</div>
+  </div>
+</div>
 							<h3><a href="mailto:roboticon@strandcc.tk">TheRoboticon</a></h3>
 							<h4>Website Manager & Repository Manager</h4>
 							<br />
-							<img src="images/quinn_profile.png" width="125px" height="125px" />
+							<div class="container">
+  <img src="images/quinn_profile.png" alt="Avatar" class="image" style="width:100%">
+  <div class="middle">
+    <div class="text">Website Manager</div>
+  </div>
+</div>
 							<h3><a href="mailto:quinntdip@strandcc.tk">QuinnTDIP</a></h3>
 							<h4>Website Manager</h4>
 							<br />
-							<img src="images/nex_profile.png" width="125px" height="125px" />
+							<div class="container">
+  <img src="images/nex_profile.png" alt="Avatar" class="image" style="width:100%">
+  <div class="middle">
+    <div class="text">Repository Manager</div>
+  </div>
+</div>
 							<h3><a href="mailto:nex@strandcc.tk">Nex</a></h3>
 							<h4>Repository Manager</h4>
 							<br />
-							<img src="images/no-egrets_profile.png" width="125px" height="125px" />
+							<div class="container">
+  <img src="images/no-egrets_profile.png" alt="Avatar" class="image" style="width:100%">
+  <div class="middle">
+    <div class="text">Project Advisor</div>
+  </div>
+</div>
 							<h3>No_Egrets</h3>
 							<h4>Project Advisor</h4>
 							<br />
-							<img src="images/braydon_profile.png" width="125px" height="125px" />
+							<div class="container">
+  <img src="images/braydon_profile.png" alt="Avatar" class="image" style="width:100%">
+  <div class="middle">
+    <div class="text">Project Advisor</div>
+  </div>
+</div>
 							<h3>Braydon</h3>
 							<h4>Project Advisor</h4>
 							<br />
