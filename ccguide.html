@@ -134,7 +134,7 @@
 							<p>This chat output might be the result of a user with moderator permissions calling <code>?modsay #general Hello there!</code>, which would post into <code>#general</code>. This tag is useful for setting up logs that post into a different channel, but it will direct any text in the Custom Command there, meaning that you can’t have multiple <code>{respond:#channel}</code> tags.</p>
 
 							<h2><div id="Time">{time}, {time12}, {date}, {datetime}, and {datetime12}</div></h2>
-							<p><em>These five variables post the 24-hour time, 12-hour time, date, date and 24-hour time, and date and 12-hour time, respectively. All of them will have the timezones in EST, but if you have the Dyno V4 Dashboard, you can change the timezone displayed.</em></p>
+							<p><em>These five variables post the 24-hour time, 12-hour time, date, date and 24-hour time, and date and 12-hour time, respectively. All of them will have the timezones in EST, but you can change the timezone displayed on the Dashboard.</em></p>
 							<p><strong>?time</strong> <strong>-</strong> <em>Posts the date and 12-hour time.</em></p>
 							<pre><code>{delete}<br>Here's the date and time: {datetime12}.</code></pre>
 							<p><strong>Chat Output:</strong> Here’s the date and time: Aug 25, 2018 03:37:53 pm.</p>
@@ -153,7 +153,6 @@
 							<pre><code>Here is the server prefix for {server}: ``{prefix}``</code></pre>
 							<p><strong>Chat Output:</strong>Here is the server prefix for Strand: <code>?</code></p>
 							<p>This would be the output if I ran this command in a server called Strand, with a prefix of ``?``. You can use this in custom commands that instruct users to use another custom command, as it will update if the prefix is ever changed.</p>
-
 							<p>These aren’t all the variables available for Dynobot. If you’re curious, you can find more on the Dynobot server or <a target="_blank" rel="noopener noreferrer" href="https://media.discordapp.net/attachments/335003834445332481/350905773141917696/unknown.png?width=611&amp;height=703">here</a>.</p>
 							<h1><div id="Creating">Building your Custom Commands:</div></h1>
 							<p>Building your own Custom Commands can be really fun! However, there are some requirements and limitations for making them. Here’s how to add Custom Commands to your server.</p>
