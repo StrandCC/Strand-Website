@@ -5,11 +5,11 @@
   </a>
 
   <a href="https://strandcc.tk">
-    <img src="https://img.shields.io/badge/Strand-Website-brightgreen.svg?logo=google-chrome&style=popout-square">
+    <img src="https://img.shields.io/badge/Strand-Website-4285F4.svg?logo=google-chrome&style=popout-square">
   </a>
 
   <a href="https://dyno.gg">
-    <img src="https://img.shields.io/badge/Dyno-Website-brightgreen.svg?logo=google-chrome&style=popout-square">
+    <img src="https://img.shields.io/badge/Dyno-Website-4285F4.svg?logo=google-chrome&style=popout-square">
   </a>
 
   <a href="https://twitter.com/dynodiscord">
