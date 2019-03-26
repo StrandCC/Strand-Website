@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>The Strand - Profile Module</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="keywords" content="Dyno, Strand, StrandCC, Strand Custom Commands, Dyno Custom Commands, Modules">
+		<meta name="description" content="Set up and run an entire Profile System, complete with moderation and character limits, via custom commands within the popular Discord bot, Dyno."/>
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109050143-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-109050143-3');
+</script>
+
+
+		<!-- Header -->
+			<header id="header">
+				<a href="../index.html" class="title">The Strand</a>
+				<nav id='navMenu'></nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Strand - Profile Module</h1>
+							<p>This module contains a profile system and tools to moderate the system, as well as a master switch. <b>This module is still being updated.</b></p>
+							<p><i>This directory assumes that you understand the basics of adding commands. We assume you are using the default command prefix, ?. Commands with inputs are denoted as ?command [input]. Commands with choice inputs are denoted as ?command [input1/input2]. Commands with optional inputs are denoted as ?command (input).</i></p>
+							<h3>Requirements</h3>
+							<p>The default tag system in Dyno needs to be enabled. Use ?module tags to enable the tag system.</p>					
+						</div>
+						<div class="inner">
+							<table>
+								<thead>
+									<tr>
+										<td><b>Trigger</b></td>
+										<td><b>Use</b></td>
+										<td><b>Command Code</b></td>
+									</tr>
+								</thead>
+								<tbody>
+									
+								</tbody>
+							</table>
+						</div>
+					</section>
+
+			</div>
+	
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; The Strand. All rights reserved. | HEADS UP: We use Google Analytics to track website traffic.</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../menu.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script src="../clipboard.js-master/dist/clipboard.min.js"></script>
+
+	</body>
+</html>
