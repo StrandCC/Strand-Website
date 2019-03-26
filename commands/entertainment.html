@@ -51,13 +51,12 @@
 										<td>?8ball [question]</td>
 										<td>Asks the all knowing <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Magic_8-Ball">Magic 8-Ball</a> a question.</td>
 										<td>{delete}<br>
-{choose:It is certain; It is decidedly so; Without a doubt; Yes definitely; You may rely on it; As I see it, yes; Most likely; Outlook good; Yes; Signs point to yes; Reply hazy try again; Ask again later; Better not tell you now; Cannot predict now; Concentrate and ask again; Don't count on it; My reply is no; My sources say no; Outlook not so good; Very doubtful}<br>
-{!announce {channel} {user.username}<br>
-<:8ball_blob:349679658033348618> 8Ball<br>
-_　_<br>
-Q. $1+<br>
-A. {choice}}<br>
-
+										{choose:It is certain; It is decidedly so; Without a doubt; Yes definitely; You may rely on it; As I see it, yes; Most likely; Outlook good; Yes; Signs point to yes; Reply hazy try again; Ask again later; Better not tell you now; Cannot predict now; Concentrate and ask again; Don't count on it; My reply is no; My sources say no; Outlook not so good; Very doubtful}<br>
+										{!announce {channel} {user.username}<br>
+										<:8ball_blob:349679658033348618> 8Ball<br>
+										_　_<br>
+										Q. $1+<br>
+										A. {choice}}<br>
 										</td>
 									</tr>
 									<tr>
@@ -67,6 +66,31 @@ A. {choice}}<br>
 										{choose:mute;second chance;second chance;second chance;second chance;second chance}<br>
 										{!announce {channel} {user} got a {choice}!}<br>
 										{!{choice} {user} 3 Roulette}</td>
+									</tr>
+									<tr>
+										<td>?gift [user]</td>
+										<td>Gifts a random object to the specified user.</td>
+										<td>{choose:a boot :boot:;a crown :crown:;a ring :ring:;an apple :apple:;a pear :pear:;a lemon :lemon:;a banana :banana:;a strawberry :strawberry:;a hamburger :hamburger:;fries :fries:;pizza :pizza:;a taco :taco:;a burrito :burrito:;an icecream :icecream:;a cake :cake:;a candy :candy:;a lolipop :lollipop:;a chocolate bar :chocolate_bar:;a doughnut :doughnut:;a cookie :cookie:;an egg :egg:;a medal :medal:;a guitar :guitar:;a dice :game_die:;a watch :watch:;a gem :gem:;a baloon :balloon:;a pen :pen_ballpoint:;a trashbin :wastebasket:}<br>
+										{!announce {channel} {user} gifted $1.user.mention {choice}!}</td>
+									</tr>
+									<tr>
+										<td>?hug [user]</td>
+										<td>Hugs a user (with a random gif).</td>
+										<td>{choose:https://tenor.com/view/anime-hug-manga-cuddle-japan-gif-10522729;https://tenor.com/view/hug-cuddle-comfort-love-friends-gif-5166500;https://tenor.com/view/elfenlied-kouta-nyu-lucy-hugging-gif-6238016;https://tenor.com/view/hug-cry-sad-anime-tackle-gif-5634582;https://tenor.com/view/seraph-love-hug-hugging-anime-gif-4900166;https://tenor.com/view/anime-run-hug-gif-9096291;https://tenor.com/view/anime-cute-sweet-hug-gif-12668677;https://tenor.com/view/cry-sad-hug-anime-gif-5634619;https://tenor.com/view/anime-friends-hug-hugging-moeta-kaoruko-gif-12307787;https://tenor.com/view/anime-hug-its-ok-gif-13041472;https://tenor.com/view/hug-anime-gif-7552075;https://tenor.com/view/love-hug-anime-affection-gif-5634630;https://tenor.com/view/abrazo-hug-anime-gif-10307432;https://tenor.com/view/hug-hugging-anime-gif-3532081;https://tenor.com/view/hug-gif-10426436}<br>
+										{user} hugged $1.user.mention!<br>
+										{choice}</td>
+									</tr>
+									<tr>
+										<td>?rate [user]</td>
+										<td>Rates another user on a scale of 1-100</td>
+										<td>{choose:1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;21;22;23;24;25;26;27;28;29;30;31;32;33;34;35;36;37;38;39;40;41;42;43;44;45;46;47;48;49;50;51;52;53;54;55;56;57;58;59;60;61;62;63;64;65;66;67;68;69;70;71;72;73;74;75;76;77;78;79;80;81;82;83;84;85;86;87;88;89;90;91;92;93;94;95;96;97;98;99;100}<br>
+										{user.username}? I'd rate them {choice}/100.</td>
+									</tr>
+									<tr>
+										<td>?ship [user]</td>
+										<td>Ask Dyno how much chances of a ship you have with another user.</td>
+										<td>{choose:1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;21;22;23;24;25;26;27;28;29;30;31;32;33;34;35;36;37;38;39;40;41;42;43;44;45;46;47;48;49;50;51;52;53;54;55;56;57;58;59;60;61;62;63;64;65;66;67;68;69;70;71;72;73;74;75;76;77;78;79;80;81;82;83;84;85;86;87;88;89;90;91;92;93;94;95;96;97;98;99;100}<br>
+										{user.username} and $1.user.mention have a {choice}% chance at love! :heartpulse:</td>
 									</tr>
 								</tbody>
 							</table>
