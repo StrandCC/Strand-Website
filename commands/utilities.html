@@ -121,6 +121,47 @@
 										{!announce {channel} Alright, I've sent a message to {#$1} saying "$2+".}<br>
 										$2+</td>
 									</tr>
+									<tr>
+										<td>?dashboard</td>
+										<td>Posts a link to the server dashboard.</td>
+										<td>{user}.username}, here is the dashboard link for {server} - <https://dyno.gg/manage/{server.id}/>.</td>
+									</tr>
+									<tr>
+										<td>?lookup [user]</td>
+										<td> Shows information about the specified user (Updated by TheSilentPro#9920).</td>
+										<td>
+											{!announce {channel} :bust_in_silhouette: | Information about **$1.user.username#$1.user.discriminator:**<br>
+											<br>
+											:white_medium_small_square: | User ID: **$1.user.id**<br>
+											:white_medium_small_square: | Account Creation: **$1.user.createdAt EST**<br>
+											:white_medium_small_square: | Server Join: **$1.user.joinedAt EST**<br>
+											:white_medium_small_square: | User Status: **$1.user.status**<br>
+											:white_medium_small_square: | User Avatar Link: [Click Here]($1.user.avatar)}
+										</td>
+									</tr>
+									<tr>
+										<td>?panel (module)</td>
+										<td>Links to a specific module on the dashboard. <br>List of modules: autoroles, customcommands, moderation, music, autoresponder, tags, actionlog, announcements, automessage & automod.</td>
+										<td>{!announce {channel} {user.user.name}, here's the [$1](https://dyno.gg/manage/{server.id}/$1) panel link.}</td>
+									</tr>
+									<tr>
+										<td>?pingmods [message]</td>
+										<td>Pings the moderators with a message. Requires two roles: Trusted & Moderator and one channel: #mod-pings.</td>
+										<td>	
+											{delete}
+											{require:Trusted}
+											{dm}
+											{!mentionable Moderator}
+											{!announce role Moderator {#mod-pings} {user.mention} ({user.username}) | $1+ | Command used in {channel}}
+											{!mentionable Moderator}
+											The moderators have been pinged!
+										</td>
+									</tr>
+									<tr>
+										<td>?status [user]</td>
+										<td>Checks the status of the specified user.</td>
+										<td>**$1.user.username** has the status: **$1.user.status.**</td>
+									</tr>
 								</tbody>
 							</table>
 
