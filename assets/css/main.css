@@ -3143,6 +3143,12 @@ input, select, textarea {
 		table td {
 			padding: 0.75em 0.75em;
 		}
+		
+		table td.overscroll {
+			display: block;
+			width: 1000px;
+			overflow-x: scroll;
+		}
 
 		table th {
 			color: #ffffff;
@@ -3151,7 +3157,7 @@ input, select, textarea {
 			padding: 0 0.75em 0.75em 0.75em;
 			text-align: left;
 		}
-
+	
 		table thead {
 			border-bottom: solid 2px rgba(255, 255, 255, 0.15);
 		}
