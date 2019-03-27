@@ -3144,7 +3144,7 @@ input, select, textarea {
 			padding: 0.75em 0.75em;
 		}
 		
-		table td.overscroll {
+		td.overscroll {
 			display: block;
 			width: 1000px;
 			overflow-x: scroll;
