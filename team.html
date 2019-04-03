@@ -8,6 +8,63 @@
 		<meta name="description" content="The Strand's Team works hard to make sure that everything we do is done to the highest possible quality."/>
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+	html {
+	  box-sizing: border-box;
+	}
+
+	*, *:before, *:after {
+	  box-sizing: inherit;
+	}
+
+	.column {
+	  float: left;
+	  width: 20%;
+	  margin-bottom: 16px;
+	  padding: 0 8px;
+	}
+
+	@media screen and (max-width: 650px) {
+	  .column {
+	    width: 100%;
+	    display: block;
+	  }
+	}
+
+	.card {
+	  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	}
+
+	.container {
+	  padding: 0 16px;
+	}
+
+	.container::after, .row::after {
+	  content: "";
+	  clear: both;
+	  display: table;
+	}
+
+	.title {
+	  color: grey;
+	}
+
+	.button {
+	  border: none;
+	  outline: 0;
+	  display: inline-block;
+	  padding: 8px;
+	  color: white;
+	  background-color: #000;
+	  text-align: center;
+	  cursor: pointer;
+	  width: 100%;
+	}
+
+	.button:hover {
+	  background-color: #555;
+	}
+	</style>
 	</head>
 	<style>
 		img {
@@ -15,7 +72,7 @@
 		height: 100px;
 		border-radius: 100%;
 		}
-		
+
 		img:hover {
                 box-shadow: 1px 1px 5px #000000;
 		}
@@ -30,6 +87,7 @@
 
   gtag('config', 'UA-109050143-3');
 </script>
+
 
 
 		<!-- Header -->
@@ -49,35 +107,98 @@
 							<br />
 							<h2 align="center"> Team Members </h2>
 							<br />
-							<!-- Roboticon -->
+							<div class="row">
+								<!-- Roboticon -->
+								<div class="column">
+							    <div class="card">
+							      <img src="https://cdn.discordapp.com/avatars/243896552928575502/950002249fb00449820e8b98f6af6b56.png?size=1024" alt="Roboticon Profile Image" style="width:50%; height:50%">
+							      <div class="container">
+							        <h2>The Roboticon</h2>
+							        <p class="title">Founder</p>
+							        <p>roboticon@strandcc.com</p>
+							        <p><button class="button">Contact</button></p>
+							      </div>
+							    </div>
+							  </div>
+
+						  <div class="column">
+						    <div class="card">
+						      <img src="https://cdn.discordapp.com/avatars/248540313059196928/82eca3b1ec6f2a1a60f8242eefa9cff4.png" alt="QuinnTDIP Profile Image" style="width:50%; height:50%">
+						      <div class="container">
+						        <h2>QuinnTDIP</h2>
+						        <p class="title">Website Manager</p>
+						        <p>quinn@strandcc.com</p>
+						        <p><button class="button">Contact</button></p>
+						      </div>
+						    </div>
+						  </div>
+
+						  <div class="column">
+						    <div class="card">
+						      <img src="https://cdn.discordapp.com/avatars/335405822106664961/374e3a894c8a6287d6c66a204ffe55e1.png?size=1024" alt="Nex Profile Image" style="width:50%; height:50%">
+						      <div class="container">
+						        <h2>Nex</h2>
+						        <p class="title">Repository Manager</p>
+						        <p>hello@strandcc.com</p>
+						        <p><button class="button">Contact</button></p>
+						      </div>
+						    </div>
+						  </div>
+						  <div class="column">
+						    <div class="card">
+						      <img src="https://cdn.discordapp.com/avatars/227759522708586497/97b55c277961bf8064099ab930a49059.png?size=1024" alt="No Egrets Profile Image" style="width:50%; height:50%">
+						      <div class="container">
+						        <h2>No Egrets</h2>
+						        <p class="title">Project Advisor</p>
+						        <p>hello@strandcc.com</p>
+						        <p><button class="button">Contact</button></p>
+						      </div>
+						    </div>
+						  </div>
+							<div class="column">
+						    <div class="card">
+						      <img src="https://cdn.discordapp.com/avatars/189107461435686912/a47b06043cab60e8d9f90717397e89d3.png?size=1024" alt="Braydon Profile Image" style="width:50%; height:50%">
+						      <div class="container">
+						        <h2>Braydon</h2>
+						        <p class="title">Project Advisor</p>
+						        <p>hello@strandcc.com</p>
+						        <p><button class="button">Contact</button></p>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+<!--
+							 Roboticon
 							<img src="https://cdn.discordapp.com/avatars/243896552928575502/950002249fb00449820e8b98f6af6b56.png?size=1024" />
 							<h3><a href="mailto:roboticon@strandcc.com">TheRoboticon</a></h3>
 							<h4>Website/Repository Manager</h4>
 							<br />
 							<br />
-							<!-- Quinn -->
+							 Quinn
 							<img src="https://cdn.discordapp.com/avatars/248540313059196928/82eca3b1ec6f2a1a60f8242eefa9cff4.png?size=1024" />
 							<h3><a href="mailto:quinn@strandcc.com">QuinnTDIP</a></h3>
 							<h4>Website Manager</h4>
 							<br />
 							<br />
-							<!-- Nex -->
+							 Nex
 							<img src="https://cdn.discordapp.com/avatars/335405822106664961/374e3a894c8a6287d6c66a204ffe55e1.png?size=1024" />
 							<h3><a href="mailto:nex@strandcc.com">Nex</a></h3>
 							<h4>Repository Manager</h4>
 							<br />
 							<br />
-							<!-- No Egrets -->
+							 No Egrets
 							<img src="https://cdn.discordapp.com/avatars/227759522708586497/97b55c277961bf8064099ab930a49059.png?size=1024" />
 							<h3>No_Egrets</h3>
 							<h4>Project Advisor</h4>
 							<br />
 							<br />
-							<!-- Braydon -->
+							 Braydon
 							<img src="https://cdn.discordapp.com/avatars/189107461435686912/a47b06043cab60e8d9f90717397e89d3.png?size=1024" />
 							<h3>Braydon</h3>
 							<h4>Project Advisor</h4>
 							<br />
+-->
+
 						</div>
 					</section>
 
