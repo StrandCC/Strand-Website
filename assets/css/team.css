@@ -1,0 +1,81 @@
+html {
+    box-sizing: border-box;
+  }
+  a:hover {
+        color: blue;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  .column {
+    float: center;
+    width: 30%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+
+  .center {
+margin: auto;
+width: 50%;
+border: 3px solid green;
+padding: 10px;
+}
+
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+
+   .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 3px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .buttonText {
+      font-size: 25px;
+  }
+
+  .button:hover {
+    background-color: #555;
+  }
+
+  img {
+       width: 100px;
+   height: 100px;
+   border-radius: 100%;
+   float: center;
+   box-shadow: 1px 1px 5px #000000;
+  }
+
+  h2 {
+   align: center;
+  }
+
+  h3 {
+   align: center;
+  }
