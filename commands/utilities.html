@@ -148,12 +148,12 @@
 										<td>?pingmods [message]</td>
 										<td>Pings the moderators with a message. Requires two roles: Trusted & Moderator and one channel: #mod-pings.</td>
 										<td>	
-											{delete}
-											{require:Trusted}
-											{dm}
-											{!mentionable Moderator}
-											{!announce role Moderator {#mod-pings} {user.mention} ({user.username}) | $1+ | Command used in {channel}}
-											{!mentionable Moderator}
+											{delete}<br>
+											{require:Trusted}<br>
+											{dm}<br>
+											{!mentionable Moderator}<br>
+											{!announce role Moderator {#mod-pings} {user.mention} ({user.username}) | $1+ | Command used in {channel}}<br>
+											{!mentionable Moderator}<br>
 											The moderators have been pinged!
 										</td>
 									</tr>
