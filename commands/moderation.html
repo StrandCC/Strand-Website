@@ -1,95 +1,109 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>The Strand - Moderation Commands</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="keywords" content="Dyno, Strand, StrandCC, Strand Custom Commands, Dyno Custom Commands, Moderation">
-		<meta name="description" content="Moderate the users on your server with this collection of Moderation custom commands for the popular Discord bot, Dyno."/>
-		<link rel="stylesheet" href="../assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109050143-3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-109050143-3');
-</script>
+
+<head>
+	<title>The Strand - Moderation Commands</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="keywords" content="Dyno, Strand, StrandCC, Strand Custom Commands, Dyno Custom Commands, Moderation">
+	<meta name="description"
+		content="Moderate the users on your server with this collection of Moderation custom commands for the popular Discord bot, Dyno." />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109050143-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'UA-109050143-3');
+	</script>
 
 
-		<!-- Header -->
-			<header id="header">
-				<a href="../index.html" class="title">The Strand</a>
-				<nav id='navMenu'></nav>
-			</header>
+	<!-- Header -->
+	<header id="header">
+		<a href="../index.html" class="title">The Strand</a>
+		<nav id='navMenu'></nav>
+	</header>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="inner">
-							<h1 class="major">Strand - Moderation Commands</h1>
-							<p>Are your server users going too crazy? Here are some Moderation Modules and Commands to add to your server.</p>
-							<p><i>This directory assumes that you understand the basics of adding commands. We assume you are using the default command prefix, ?. Commands with inputs are denoted as ?command [input]. Commands with choice inputs are denoted as ?command [input1/input2].</i></p>
-						</div>
-						<div class="inner">
-							<table>
-								<thead>
-									<tr>
-										<td><b>Trigger</b></td>
-										<td><b>Use</b></td>
-										<td><b>Command Code</b></td>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>?badnick [user]</td>
-										<td>Changes the user's name to "Something Suitable" and informs them of a violation (Requires Server Moderator).</td>
-										<td>{delete}<br>
-										{silent}<br>
-										{require:serverMod}<br>
-										{dm:$1}$1.user.username, your nickname was changed by moderator {user} as it did not comply with the server rules.<br>
-										{!setnick $1 Something Suitable}</td>
-									</tr>
-									<tr>
-										<td>?cooldown [user]</td>
-										<td>Mutes a user for 2 minutes and removes their last five messages.</td>
-										<td>{delete}<br>
-										{silent}<br>
-										{require:serverMod}<br>
-										{!mute $1 2m Cooldown}<br>
-										{!purge $1.user.mention 5}<br>
-										$1.user.mention, please cool down for 2 minutes.</td>
-									</tr>
-								</tbody>
-							</table>
-					</section>
-
+		<!-- Main -->
+		<section id="main" class="wrapper">
+			<div class="inner">
+				<h1 class="major">Strand - Moderation Commands</h1>
+				<p>Are your server users going too crazy? Here are some Moderation Modules and Commands to add to your
+					server.</p>
+				<p><i>This directory assumes that you understand the basics of adding commands. We assume you are using
+						the default command prefix, ?. Commands with inputs are denoted as ?command [input]. Commands
+						with choice inputs are denoted as ?command [input1/input2].</i></p>
 			</div>
+			<div class="inner">
+				<table>
+					<thead>
+						<tr>
+							<td><b>Trigger</b></td>
+							<td><b>Use</b></td>
+							<td><b>Command Code</b></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>?badnick [user]</td>
+							<td>Changes the user's name to "Something Suitable" and informs them of a violation
+								(Requires Server Moderator).</td>
+							<td>{delete}<br>
+								{silent}<br>
+								{require:serverMod}<br>
+								{dm:$1}$1.user.username, your nickname was changed by moderator {user} as it did not
+								comply with the server rules.<br>
+								{!setnick $1 Something Suitable}</td>
+						</tr>
+						<tr>
+							<td>?cooldown [user]</td>
+							<td>Mutes a user for 2 minutes and removes their last five messages.</td>
+							<td>{delete}<br>
+								{silent}<br>
+								{require:serverMod}<br>
+								{!mute $1 2m Cooldown}<br>
+								{!purge $1.user.mention 5}<br>
+								$1.user.mention, please cool down for 2 minutes.</td>
+						</tr>
+					</tbody>
+				</table>
+		</section>
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; The Strand. All rights reserved. | HEADS UP: We use Google Analytics to track website traffic.</li>
-					</ul>
-				</div>
-			</footer>
+	</div>
 
-		<!-- Scripts -->
-			<script src="../assets/js/jquery.min.js"></script>
-			<script src="../menu.js"></script>
-			<script src="../assets/js/jquery.scrollex.min.js"></script>
-			<script src="../assets/js/jquery.scrolly.min.js"></script>
-			<script src="../assets/js/browser.min.js"></script>
-			<script src="../assets/js/breakpoints.min.js"></script>
-			<script src="../assets/js/util.js"></script>
-			<script src="../assets/js/main.js"></script>
-			<script src="../clipboard.js-master/dist/clipboard.min.js"></script>
+	<!-- Footer -->
+	<footer id="footer" class="wrapper alt">
+		<div class="inner">
+			<ul class="menu">
+				<li>&copy; The Strand. All rights reserved. | HEADS UP: We use Google Analytics to track website
+					traffic.</li>
+			</ul>
+		</div>
+	</footer>
 
-	</body>
+	<!-- Scripts -->
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/menu.js"></script>
+	<script src="../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../assets/js/jquery.scrolly.min.js"></script>
+	<script src="../assets/js/browser.min.js"></script>
+	<script src="../assets/js/breakpoints.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<script src="../assets/js/main.js"></script>
+	<script src="../clipboard.js-master/dist/clipboard.min.js"></script>
+
+</body>
+
 </html>

@@ -1,124 +1,140 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>The Strand - Utility Commands</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="keywords" content="Dyno, Strand, StrandCC, Strand Custom Commands, Dyno Custom Commands">
-		<meta name="description" content="Use these powerful utility custom commands to improve communication and general use, built for Dyno, the popular Discord bot."/>
-		<link rel="stylesheet" href="../assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<head>
+	<title>The Strand - Utility Commands</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="keywords" content="Dyno, Strand, StrandCC, Strand Custom Commands, Dyno Custom Commands">
+	<meta name="description"
+		content="Use these powerful utility custom commands to improve communication and general use, built for Dyno, the popular Discord bot." />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109050143-3"></script>
 	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	  gtag('config', 'UA-109050143-3');
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'UA-109050143-3');
 	</script>
 
-		<!-- Header -->
-		<header id="header">
-			<a href="../index.html" class="title">The Strand</a>
-			<nav id='navMenu'></nav>
-		</header>
+	<!-- Header -->
+	<header id="header">
+		<a href="../index.html" class="title">The Strand</a>
+		<nav id='navMenu'></nav>
+	</header>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="inner">
-							<h1 class="major">Strand - Utility Commands</h1>
-							<p>These are useful utility commands that you can install on your server to improve communication and general use.</p>
-							<p><i>This directory assumes that you understand the basics of adding commands. We assume you are using the default command prefix, ?. Commands with inputs are denoted as ?command [input]. Commands with choice inputs are denoted as ?command [input1/input2].</i></p>
-						</div>
-						<div class="inner">
-							<table>
-								<thead>
-									<tr>
-										<td><b>Trigger</b></td>
-										<td><b>Use</b></td>
-										<td><b>Command Code</b></td>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>?say [message]</td>
-										<td>Makes the bot say a specified message (Requires Server Moderator).</td>
-										<td>{delete}<br>
-										{require:serverMod}<br>
-										$1+</td>
-									</tr>
-									<tr>
-										<td>?dm [user] [message]</td>
-										<td>Makes the bot direct message a specified message to a user (Requires Server Moderator).</td>
-										<td>{delete}<br>
-										{require:serverMod}<br>
-										{dm:$1}$2+</td>
-									</tr>
-									<tr>
-										<td>?embed [message]
-										<td>Creates an embedded message.</td>
-										<td>{delete}<br>
-										{!announce {channel} $1+}
-										</td>
-									</tr>
-									<tr>
-										<td>?owner [message]</td>
-										<td>Sends a direct message to the server owner.</td>
-										<td>{delete}<br>
-										{dm:{server.ownerID}}{user} sent you a message! Message: **$1+**<br>
-										{!announce {channel} {user}, your message has been sent to the server owner! :mailbox_with_mail:}</td>
-									</tr>
-									<tr>
-										<td>?pomodoro</td>
-										<td>Sets a <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro Timer</a> for the user.</td>
-										<td>{delete}<br>
-										{dm}:tomato: Tick tock! Your pomodoro timer has been set, {user}!<br>
-										{silent}<br>
-										{!remindme {user} Your pomodoro timer just ended! in 25 minutes}</td>
-									</tr>
-									<tr>
-										<td>?mention [user] [message]</td>
-										<td>Mentions a user with a message, as well as shows their current status.</td>
-										<td>{delete}<br>
-										$1.user.mention **($1.user.status)** | $2+</td>
-									</tr>
-									<tr>
-										<td>?link [link] [description]</td>
-										<td>Embeds a clickable link button with a description.</td>
-										<td>{delete}<br>
-										{!announce {channel} [Link](https://$1) | $2+}</td>
-									</tr>
-									<tr>
-										<td>?superclean</td>
-										<td>Cleans the channel of Dyno commands and messages</td>
-										<td>{delete}<br>
-										{silent}<br>
-										{require:serverMod}<br>
-										{!clean}<br>
-										{!purge startswith {prefix}}<br>
-										All Dynobot messages and commands in this channel have been cleaned!</td>
-									</tr>
-									<tr>
-										<td>?advdm [user] [message]</td>
-										<td>Sends a DM to a user and posts an embed with the message confirmation (requires Server Administrator).</td>
-										<td>{delete}<br>
-										{require:serverAdmin}
-										{dm:$1}<br>
-										$2+<br>
-										{!announce {channel} {user}, I've sent a dm to $1.user.mention saying "$2+".}</td>
-									</tr>
-									<tr>
-										<td>?advsay [channel] [message]</td>
-										<td>Sends a message as Dyno to a channel and posts an embed with the message confirmation (requires Server Administrator).</td>
-										<td>{delete}<br>
-										{require:serverAdmin}<br>
-										{respond:#$1}<br>
-										{!announce {channel} Alright, I've sent a message to {#$1} saying "$2+".}<br>
+		<!-- Main -->
+		<section id="main" class="wrapper">
+			<div class="inner">
+				<h1 class="major">Strand - Utility Commands</h1>
+				<p>These are useful utility commands that you can install on your server to improve communication and
+					general use.</p>
+				<p><i>This directory assumes that you understand the basics of adding commands. We assume you are using
+						the default command prefix, ?. Commands with inputs are denoted as ?command [input]. Commands
+						with choice inputs are denoted as ?command [input1/input2].</i></p>
+			</div>
+			<div class="inner">
+				<table>
+					<thead>
+						<tr>
+							<td><b>Trigger</b></td>
+							<td><b>Use</b></td>
+							<td><b>Command Code</b></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>?say [message]</td>
+							<td>Makes the bot say a specified message (Requires Server Moderator).</td>
+							<td>{delete}<br>
+								{require:serverMod}<br>
+								$1+</td>
+						</tr>
+						<tr>
+							<td>?dm [user] [message]</td>
+							<td>Makes the bot direct message a specified message to a user (Requires Server Moderator).
+							</td>
+							<td>{delete}<br>
+								{require:serverMod}<br>
+								{dm:$1}$2+</td>
+						</tr>
+						<tr>
+							<td>?embed [message]
+							<td>Creates an embedded message.</td>
+							<td>{delete}<br>
+								{!announce {channel} $1+}
+							</td>
+						</tr>
+						<tr>
+							<td>?owner [message]</td>
+							<td>Sends a direct message to the server owner.</td>
+							<td>{delete}<br>
+								{dm:{server.ownerID}}{user} sent you a message! Message: **$1+**<br>
+								{!announce {channel} {user}, your message has been sent to the server owner!
+								:mailbox_with_mail:}</td>
+						</tr>
+						<tr>
+							<td>?pomodoro</td>
+							<td>Sets a <a target="_blank" rel="noopener noreferrer"
+									href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro Timer</a> for the
+								user.</td>
+							<td>{delete}<br>
+								{dm}:tomato: Tick tock! Your pomodoro timer has been set, {user}!<br>
+								{silent}<br>
+								{!remindme {user} Your pomodoro timer just ended! in 25 minutes}</td>
+						</tr>
+						<tr>
+							<td>?mention [user] [message]</td>
+							<td>Mentions a user with a message, as well as shows their current status.</td>
+							<td>{delete}<br>
+								$1.user.mention **($1.user.status)** | $2+</td>
+						</tr>
+						<tr>
+							<td>?link [link] [description]</td>
+							<td>Embeds a clickable link button with a description.</td>
+							<td>{delete}<br>
+								{!announce {channel} [Link](https://$1) | $2+}</td>
+						</tr>
+						<tr>
+							<td>?superclean</td>
+							<td>Cleans the channel of Dyno commands and messages</td>
+							<td>{delete}<br>
+								{silent}<br>
+								{require:serverMod}<br>
+								{!clean}<br>
+								{!purge startswith {prefix}}<br>
+								All Dynobot messages and commands in this channel have been cleaned!</td>
+						</tr>
+						<tr>
+							<td>?advdm [user] [message]</td>
+							<td>Sends a DM to a user and posts an embed with the message confirmation (requires Server
+								Administrator).</td>
+							<td>{delete}<br>
+								{require:serverAdmin}
+								{dm:$1}<br>
+								$2+<br>
+								{!announce {channel} {user}, I've sent a dm to $1.user.mention saying "$2+".}</td>
+						</tr>
+						<tr>
+							<td>?advsay [channel] [message]</td>
+							<td>Sends a message as Dyno to a channel and posts an embed with the message confirmation
+								(requires Server Administrator).</td>
+							<td>{delete}<br>
+								{require:serverAdmin}<br>
+								{respond:#$1}<br>
+								{!announce {channel} Alright, I've sent a message to {#$1} saying "$2+".}<br>
 										$2+</td>
 									</tr>
 									<tr>
@@ -180,7 +196,7 @@
 
 		<!-- Scripts -->
 			<script src="../assets/js/jquery.min.js"></script>
-			<script src="../menu.js"></script>
+			<script src="../assets/js/menu.js"></script>
 			<script src="../assets/js/jquery.scrollex.min.js"></script>
 			<script src="../assets/js/jquery.scrolly.min.js"></script>
 			<script src="../assets/js/browser.min.js"></script>

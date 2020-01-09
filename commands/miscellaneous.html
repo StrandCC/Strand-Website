@@ -1,111 +1,129 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>The Strand - Miscellaneous Commands</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="keywords" content="Dyno, Strand, StrandCC, Strand Custom Commands, Dyno Custom Commands, Collection, Miscellaneous">
-		<meta name="description" content="Take a look at this collection of Miscellaneous Custom Commands for the popular Discord bot, Dyno."/>
-		<link rel="stylesheet" href="../assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109050143-3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-109050143-3');
-</script>
+
+<head>
+	<title>The Strand - Miscellaneous Commands</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="keywords"
+		content="Dyno, Strand, StrandCC, Strand Custom Commands, Dyno Custom Commands, Collection, Miscellaneous">
+	<meta name="description"
+		content="Take a look at this collection of Miscellaneous Custom Commands for the popular Discord bot, Dyno." />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109050143-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'UA-109050143-3');
+	</script>
 
 
-		<!-- Header -->
-			<header id="header">
-				<a href="../index.html" class="title">The Strand</a>
-				<nav id='navMenu'></nav>
-			</header>
+	<!-- Header -->
+	<header id="header">
+		<a href="../index.html" class="title">The Strand</a>
+		<nav id='navMenu'></nav>
+	</header>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="inner">
-							<h1 class="major">Strand - Miscellaneous Commands</h1>
-							<p>These are Miscellaneous commands that you can use to improve the experience of your server. <b>This section is still being updated, check back soon.</b></p>
-							<p><i>This directory assumes that you understand the basics of adding commands. We assume you are using the default command prefix, ?. Commands with inputs are denoted as ?command [input]. Commands with choice inputs are denoted as ?command [input1/input2].</i></p>
-						</div>
-						<div class="inner">
-							<table>
-								<thead>
-									<tr>
-										<td><b>Trigger</b></td>
-										<td><b>Use</b></td>
-										<td><b>Command Code</b></td>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>?bing [word]</td>
-										<td>Provides a Bing search link for a single word.</td>
-										<td>{delete}<br>
-										{!announce {channel} {user}, [Here's](https://bing.com/search?q=$1) your Bing search result for: **$1+**.}
-										</td>
-									</tr>
-									<tr>
-										<td>?dict [word]</td>
-										<td>Provides a Wiktionary search link for a single word.</td>
-										<td>{delete}<br>
-										{!announce {channel} {user}, [Here's](https://en.wiktionary.org/wiki/$1) your Wiktionary result for: **$1**.}
-										</td>
-									</tr>
-									<tr>
-										<td>?wiki [word]</td>
-										<td>Provides a Wiktipedia search link for a single word.</td>
-										<td>{delete}<br>
-										{!announce {channel} {user}, [Here's](https://en.wikipedia.org/wiki/$1) your Wikipedia search result for: **$1**.}
-										</td>
-									</tr>
-									<tr>
-										<td>?gsearch [word]</td>
-										<td>Provides a Google search link for a single word.</td>
-										<td>{delete}<br>
-										{!announce {channel} {user}, [Here's](https://www.google.com/search?q=$1) your Google search result for: **$1**.}
-										</td>
-									</tr>
-									<tr>
-										<td>?reddit [subreddit]</td>
-										<td>Provides a Reddit link for a specific subreddit.</td>
-										<td>{delete}<br>
-										{!announce {channel} {user}, here's your [subreddit](https://www.reddit.com/r/$1) for **r/$1**!}
-										</td>
-									</tr>
-								</tbody>
-							</table>
-					</section>
-
+		<!-- Main -->
+		<section id="main" class="wrapper">
+			<div class="inner">
+				<h1 class="major">Strand - Miscellaneous Commands</h1>
+				<p>These are Miscellaneous commands that you can use to improve the experience of your server. <b>This
+						section is still being updated, check back soon.</b></p>
+				<p><i>This directory assumes that you understand the basics of adding commands. We assume you are using
+						the default command prefix, ?. Commands with inputs are denoted as ?command [input]. Commands
+						with choice inputs are denoted as ?command [input1/input2].</i></p>
 			</div>
+			<div class="inner">
+				<table>
+					<thead>
+						<tr>
+							<td><b>Trigger</b></td>
+							<td><b>Use</b></td>
+							<td><b>Command Code</b></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>?bing [word]</td>
+							<td>Provides a Bing search link for a single word.</td>
+							<td>{delete}<br>
+								{!announce {channel} {user}, [Here's](https://bing.com/search?q=$1) your Bing search
+								result for: **$1+**.}
+							</td>
+						</tr>
+						<tr>
+							<td>?dict [word]</td>
+							<td>Provides a Wiktionary search link for a single word.</td>
+							<td>{delete}<br>
+								{!announce {channel} {user}, [Here's](https://en.wiktionary.org/wiki/$1) your Wiktionary
+								result for: **$1**.}
+							</td>
+						</tr>
+						<tr>
+							<td>?wiki [word]</td>
+							<td>Provides a Wiktipedia search link for a single word.</td>
+							<td>{delete}<br>
+								{!announce {channel} {user}, [Here's](https://en.wikipedia.org/wiki/$1) your Wikipedia
+								search result for: **$1**.}
+							</td>
+						</tr>
+						<tr>
+							<td>?gsearch [word]</td>
+							<td>Provides a Google search link for a single word.</td>
+							<td>{delete}<br>
+								{!announce {channel} {user}, [Here's](https://www.google.com/search?q=$1) your Google
+								search result for: **$1**.}
+							</td>
+						</tr>
+						<tr>
+							<td>?reddit [subreddit]</td>
+							<td>Provides a Reddit link for a specific subreddit.</td>
+							<td>{delete}<br>
+								{!announce {channel} {user}, here's your [subreddit](https://www.reddit.com/r/$1) for
+								**r/$1**!}
+							</td>
+						</tr>
+					</tbody>
+				</table>
+		</section>
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; The Strand. All rights reserved. | HEADS UP: We use Google Analytics to track website traffic.</li>
-					</ul>
-				</div>
-			</footer>
+	</div>
 
-		<!-- Scripts -->
-			<script src="../assets/js/jquery.min.js"></script>
-			<script src="../menu.js"></script>
-			<script src="../assets/js/jquery.scrollex.min.js"></script>
-			<script src="../assets/js/jquery.scrolly.min.js"></script>
-			<script src="../assets/js/browser.min.js"></script>
-			<script src="../assets/js/breakpoints.min.js"></script>
-			<script src="../assets/js/util.js"></script>
-			<script src="../assets/js/main.js"></script>
-			<script src="../clipboard.js-master/dist/clipboard.min.js"></script>
+	<!-- Footer -->
+	<footer id="footer" class="wrapper alt">
+		<div class="inner">
+			<ul class="menu">
+				<li>&copy; The Strand. All rights reserved. | HEADS UP: We use Google Analytics to track website
+					traffic.</li>
+			</ul>
+		</div>
+	</footer>
 
-	</body>
+	<!-- Scripts -->
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/menu.js"></script>
+	<script src="../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../assets/js/jquery.scrolly.min.js"></script>
+	<script src="../assets/js/browser.min.js"></script>
+	<script src="../assets/js/breakpoints.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<script src="../assets/js/main.js"></script>
+	<script src="../clipboard.js-master/dist/clipboard.min.js"></script>
+
+</body>
+
 </html>

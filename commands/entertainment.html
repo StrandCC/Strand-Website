@@ -1,123 +1,151 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>The Strand - Entertainment Commands</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="keywords" content="Dyno, Strand, StrandCC, Strand Custom Commands, Dyno Custom Commands, Entertainment">
-		<meta name="description" content="Add fun custom commands like Russian Roulette or a Magic 8Ball to the popular Discord bot, Dyno."/>
-		<link rel="stylesheet" href="../assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109050143-3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-109050143-3');
-</script>
+
+<head>
+	<title>The Strand - Entertainment Commands</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="keywords" content="Dyno, Strand, StrandCC, Strand Custom Commands, Dyno Custom Commands, Entertainment">
+	<meta name="description"
+		content="Add fun custom commands like Russian Roulette or a Magic 8Ball to the popular Discord bot, Dyno." />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109050143-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'UA-109050143-3');
+	</script>
 
 
-		<!-- Header -->
-			<header id="header">
-				<a href="../index.html" class="title">The Strand</a>
-				<nav id='navMenu'></nav>
-			</header>
+	<!-- Header -->
+	<header id="header">
+		<a href="../index.html" class="title">The Strand</a>
+		<nav id='navMenu'></nav>
+	</header>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="inner">
-							<h1 class="major">Strand - Entertainment Commands</h1>
-							<p>These are amusing commands and game modules for entertainment in your server.</p>
-							<p><i>This directory assumes that you understand the basics of adding commands. We assume you are using the default command prefix, ?. Commands with inputs are denoted as ?command [input]. Commands with choice inputs are denoted as ?command [input1/input2].</i></p>
-						</div>
-
-						<div class="inner">
-							<table>
-								<thead>
-									<tr>
-										<td><b>Trigger</b></td>
-										<td><b>Use</b></td>
-										<td><b>Command Code</b></td>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>?8ball [question]</td>
-										<td>Asks the all knowing <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Magic_8-Ball">Magic 8-Ball</a> a question.</td>
-										<td class="overscroll">{delete}<br>
-										{choose:It is certain; It is decidedly so; Without a doubt; Yes definitely; You may rely on it; As I see it, yes; Most likely; Outlook good; Yes; Signs point to yes; Reply hazy try again; Ask again later; Better not tell you now; Cannot predict now; Concentrate and ask again; Don't count on it; My reply is no; My sources say no; Outlook not so good; Very doubtful}<br>
-										{!announce {channel} {user.username}<br>
-										<:8ball_blob:349679658033348618> 8Ball<br>
-										_　_<br>
-										Q. $1+<br>
-										A. {choice}}<br>
-										</td>
-									</tr>
-									<tr>
-										<td>?roulette</td>
-										<td>Plays a game of <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Russian_roulette">Russian Roulette</a>, muting the user for 3 mninutes if they lose. The user cannot be a moderator or administrator.</td>
-										<td>{delete}<br>
-										{choose:mute;second chance;second chance;second chance;second chance;second chance}<br>
-										{!announce {channel} {user} got a {choice}!}<br>
-										{!{choice} {user} 3 Roulette}</td>
-									</tr>
-									<tr>
-										<td>?gift [user]</td>
-										<td>Gifts a random object to the specified user.</td>
-										<td class="overscroll">{choose:a boot :boot:;a crown :crown:;a ring :ring:;an apple :apple:;a pear :pear:;a lemon :lemon:;a banana :banana:;a strawberry :strawberry:;a hamburger :hamburger:;fries :fries:;pizza :pizza:;a taco :taco:;a burrito :burrito:;an icecream :icecream:;a cake :cake:;a candy :candy:;a lolipop :lollipop:;a chocolate bar :chocolate_bar:;a doughnut :doughnut:;a cookie :cookie:;an egg :egg:;a medal :medal:;a guitar :guitar:;a dice :game_die:;a watch :watch:;a gem :gem:;a baloon :balloon:;a pen :pen_ballpoint:;a trashbin :wastebasket:}<br>
-										{!announce {channel} {user} gifted $1.user.mention {choice}!}</td>
-									</tr>
-									<tr>
-										<td>?hug [user]</td>
-										<td>Hugs a user (with a random gif).</td>
-										<td class="overscroll">{choose:https://tenor.com/view/anime-hug-manga-cuddle-japan-gif-10522729;https://tenor.com/view/hug-cuddle-comfort-love-friends-gif-5166500;https://tenor.com/view/elfenlied-kouta-nyu-lucy-hugging-gif-6238016;https://tenor.com/view/hug-cry-sad-anime-tackle-gif-5634582;https://tenor.com/view/seraph-love-hug-hugging-anime-gif-4900166;https://tenor.com/view/anime-run-hug-gif-9096291;https://tenor.com/view/anime-cute-sweet-hug-gif-12668677;https://tenor.com/view/cry-sad-hug-anime-gif-5634619;https://tenor.com/view/anime-friends-hug-hugging-moeta-kaoruko-gif-12307787;https://tenor.com/view/anime-hug-its-ok-gif-13041472;https://tenor.com/view/hug-anime-gif-7552075;https://tenor.com/view/love-hug-anime-affection-gif-5634630;https://tenor.com/view/abrazo-hug-anime-gif-10307432;https://tenor.com/view/hug-hugging-anime-gif-3532081;https://tenor.com/view/hug-gif-10426436}<br>
-										{user} hugged $1.user.mention!<br>
-										{choice}</td>
-									</tr>
-									<tr>
-										<td>?rate [user]</td>
-										<td>Rates another user on a scale of 1-100</td>
-										<td class="overscroll">{choose:1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;21;22;23;24;25;26;27;28;29;30;31;32;33;34;35;36;37;38;39;40;41;42;43;44;45;46;47;48;49;50;51;52;53;54;55;56;57;58;59;60;61;62;63;64;65;66;67;68;69;70;71;72;73;74;75;76;77;78;79;80;81;82;83;84;85;86;87;88;89;90;91;92;93;94;95;96;97;98;99;100}<br>
-										{user.username}? I'd rate them {choice}/100.</td>
-									</tr>
-									<tr>
-										<td>?ship [user]</td>
-										<td>Ask Dyno how much chances of a ship you have with another user.</td>
-										<td class="overscroll">{choose:1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;21;22;23;24;25;26;27;28;29;30;31;32;33;34;35;36;37;38;39;40;41;42;43;44;45;46;47;48;49;50;51;52;53;54;55;56;57;58;59;60;61;62;63;64;65;66;67;68;69;70;71;72;73;74;75;76;77;78;79;80;81;82;83;84;85;86;87;88;89;90;91;92;93;94;95;96;97;98;99;100}<br>
-										{user.username} and $1.user.mention have a {choice}% chance at love! :heartpulse:</td>
-									</tr>
-								</tbody>
-							</table>
-
-					</section>
-
+		<!-- Main -->
+		<section id="main" class="wrapper">
+			<div class="inner">
+				<h1 class="major">Strand - Entertainment Commands</h1>
+				<p>These are amusing commands and game modules for entertainment in your server.</p>
+				<p><i>This directory assumes that you understand the basics of adding commands. We assume you are using
+						the default command prefix, ?. Commands with inputs are denoted as ?command [input]. Commands
+						with choice inputs are denoted as ?command [input1/input2].</i></p>
 			</div>
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; The Strand. All rights reserved. | HEADS UP: We use Google Analytics to track website traffic.</li>
-					</ul>
-				</div>
-			</footer>
+			<div class="inner">
+				<table>
+					<thead>
+						<tr>
+							<td><b>Trigger</b></td>
+							<td><b>Use</b></td>
+							<td><b>Command Code</b></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>?8ball [question]</td>
+							<td>Asks the all knowing <a target="_blank" rel="noopener noreferrer"
+									href="https://en.wikipedia.org/wiki/Magic_8-Ball">Magic 8-Ball</a> a question.</td>
+							<td class="overscroll">{delete}<br>
+								{choose:It is certain; It is decidedly so; Without a doubt; Yes definitely; You may rely
+								on it; As I see it, yes; Most likely; Outlook good; Yes; Signs point to yes; Reply hazy
+								try again; Ask again later; Better not tell you now; Cannot predict now; Concentrate and
+								ask again; Don't count on it; My reply is no; My sources say no; Outlook not so good;
+								Very doubtful}<br>
+								{!announce {channel} {user.username}<br>
+								<:8ball_blob:349679658033348618> 8Ball<br>
+									_　_<br>
+									Q. $1+<br>
+									A. {choice}}<br>
+							</td>
+						</tr>
+						<tr>
+							<td>?roulette</td>
+							<td>Plays a game of <a target="_blank" rel="noopener noreferrer"
+									href="https://en.wikipedia.org/wiki/Russian_roulette">Russian Roulette</a>, muting
+								the user for 3 mninutes if they lose. The user cannot be a moderator or administrator.
+							</td>
+							<td>{delete}<br>
+								{choose:mute;second chance;second chance;second chance;second chance;second chance}<br>
+								{!announce {channel} {user} got a {choice}!}<br>
+								{!{choice} {user} 3 Roulette}</td>
+						</tr>
+						<tr>
+							<td>?gift [user]</td>
+							<td>Gifts a random object to the specified user.</td>
+							<td class="overscroll">{choose:a boot :boot:;a crown :crown:;a ring :ring:;an apple
+								:apple:;a pear :pear:;a lemon :lemon:;a banana :banana:;a strawberry :strawberry:;a
+								hamburger :hamburger:;fries :fries:;pizza :pizza:;a taco :taco:;a burrito :burrito:;an
+								icecream :icecream:;a cake :cake:;a candy :candy:;a lolipop :lollipop:;a chocolate bar
+								:chocolate_bar:;a doughnut :doughnut:;a cookie :cookie:;an egg :egg:;a medal :medal:;a
+								guitar :guitar:;a dice :game_die:;a watch :watch:;a gem :gem:;a baloon :balloon:;a pen
+								:pen_ballpoint:;a trashbin :wastebasket:}<br>
+								{!announce {channel} {user} gifted $1.user.mention {choice}!}</td>
+						</tr>
+						<tr>
+							<td>?hug [user]</td>
+							<td>Hugs a user (with a random gif).</td>
+							<td class="overscroll">
+								{choose:https://tenor.com/view/anime-hug-manga-cuddle-japan-gif-10522729;https://tenor.com/view/hug-cuddle-comfort-love-friends-gif-5166500;https://tenor.com/view/elfenlied-kouta-nyu-lucy-hugging-gif-6238016;https://tenor.com/view/hug-cry-sad-anime-tackle-gif-5634582;https://tenor.com/view/seraph-love-hug-hugging-anime-gif-4900166;https://tenor.com/view/anime-run-hug-gif-9096291;https://tenor.com/view/anime-cute-sweet-hug-gif-12668677;https://tenor.com/view/cry-sad-hug-anime-gif-5634619;https://tenor.com/view/anime-friends-hug-hugging-moeta-kaoruko-gif-12307787;https://tenor.com/view/anime-hug-its-ok-gif-13041472;https://tenor.com/view/hug-anime-gif-7552075;https://tenor.com/view/love-hug-anime-affection-gif-5634630;https://tenor.com/view/abrazo-hug-anime-gif-10307432;https://tenor.com/view/hug-hugging-anime-gif-3532081;https://tenor.com/view/hug-gif-10426436}<br>
+								{user} hugged $1.user.mention!<br>
+								{choice}</td>
+						</tr>
+						<tr>
+							<td>?rate [user]</td>
+							<td>Rates another user on a scale of 1-100</td>
+							<td class="overscroll">
+								{choose:1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;21;22;23;24;25;26;27;28;29;30;31;32;33;34;35;36;37;38;39;40;41;42;43;44;45;46;47;48;49;50;51;52;53;54;55;56;57;58;59;60;61;62;63;64;65;66;67;68;69;70;71;72;73;74;75;76;77;78;79;80;81;82;83;84;85;86;87;88;89;90;91;92;93;94;95;96;97;98;99;100}<br>
+								{user.username}? I'd rate them {choice}/100.</td>
+						</tr>
+						<tr>
+							<td>?ship [user]</td>
+							<td>Ask Dyno how much chances of a ship you have with another user.</td>
+							<td class="overscroll">
+								{choose:1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;21;22;23;24;25;26;27;28;29;30;31;32;33;34;35;36;37;38;39;40;41;42;43;44;45;46;47;48;49;50;51;52;53;54;55;56;57;58;59;60;61;62;63;64;65;66;67;68;69;70;71;72;73;74;75;76;77;78;79;80;81;82;83;84;85;86;87;88;89;90;91;92;93;94;95;96;97;98;99;100}<br>
+								{user.username} and $1.user.mention have a {choice}% chance at love! :heartpulse:</td>
+						</tr>
+					</tbody>
+				</table>
 
-		<!-- Scripts -->
-			<script src="../assets/js/jquery.min.js"></script>
-			<script src="../menu.js"></script>
-			<script src="../assets/js/jquery.scrollex.min.js"></script>
-			<script src="../assets/js/jquery.scrolly.min.js"></script>
-			<script src="../assets/js/browser.min.js"></script>
-			<script src="../assets/js/breakpoints.min.js"></script>
-			<script src="../assets/js/util.js"></script>
-			<script src="../assets/js/main.js"></script>
-			<script src="../clipboard.js-master/dist/clipboard.min.js"></script>
+		</section>
 
-	</body>
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer" class="wrapper alt">
+		<div class="inner">
+			<ul class="menu">
+				<li>&copy; The Strand. All rights reserved. | HEADS UP: We use Google Analytics to track website
+					traffic.</li>
+			</ul>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/menu.js"></script>
+	<script src="../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../assets/js/jquery.scrolly.min.js"></script>
+	<script src="../assets/js/browser.min.js"></script>
+	<script src="../assets/js/breakpoints.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<script src="../assets/js/main.js"></script>
+	<script src="../clipboard.js-master/dist/clipboard.min.js"></script>
+
+</body>
+
 </html>
